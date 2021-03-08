@@ -21,13 +21,13 @@ def snail(a, b, h):
     return count
 
 
-print(snail(a, b, h))
+# print(snail(a, b, h))
 # 수학식으로 풀이
 # import sys
 # import math
-# a, b, h = map(int, sys.stdin.readline().split())
-# cnt = math.ceil((h-b) / (a - b))
-# print(cnt)
+a, b, h = map(int, sys.stdin.readline().split())
+cnt = math.ceil((h-b) / (a - b))
+print(cnt)
 
 # 10250번
 # 쌓음 T = 2 , H W N 순서로 입력을 받음
@@ -44,7 +44,7 @@ for i in range(a):
 
 # 1929번
 # 소수구하기 입력: 범위값
-
+# 함수로 풀기
 a = list(map(int, input().split()))
 
 
@@ -59,4 +59,20 @@ def isPrime(input):
 
 for i in range(a[0], a[1]+1):
     if(isPrime(i)):
+        print(i)
+
+# 그냥 풀기
+a = list(map(int, input().split()))
+check = True
+
+for i in range(a[0], a[1]+1):
+    if i == 1:
+        check = False
+    elif i > 1:
+        check = True
+    for j in range(2, int(i**0.5 + 1)):
+        if(i % j == 0):
+            check = False
+            break
+    if check:
         print(i)
