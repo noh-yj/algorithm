@@ -21,7 +21,7 @@ def snail(a, b, h):
     return count
 
 
-# print(snail(a, b, h))
+print(snail(a, b, h))
 # 수학식으로 풀이
 # import sys
 # import math
