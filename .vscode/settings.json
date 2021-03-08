@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
+    "git.ignoreLimitWarning": true,
+    "python.autoComplete.addBrackets": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true
+    
+}
