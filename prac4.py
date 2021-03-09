@@ -101,6 +101,8 @@ for i in a:
 # print(current_max)
 
 # 좌표정렬 다시
+
+
 # n = int(input())
 # a = []
 # for i in range(n):
