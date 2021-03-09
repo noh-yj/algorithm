@@ -2,35 +2,37 @@
 
 # while True:
 #     string = input()
-#     if string == ".":
-#         break
 #     stack = []
-#     val = True
-#     for i in string:
-#         if i == "(" or i == "[":
-#             stack.append(i)
-#         elif i == ")":
+#     answer = True
+#     if string == ".":
+
+#         break
+#     for char in string:
+#         if char == "(" or char == "[":
+#             stack.append(char)
+#         elif char == ")":
 #             if len(stack) == 0:
-#                 val = False
+#                 answer = False
 #                 break
-#             if stack[-1] == "(":
+#             if stack[-1] == '(':
 #                 stack.pop()
 #             else:
-#                 val = False
+#                 answer = False
 #                 break
-#         elif i == "]":
+#         elif char == ']':
 #             if len(stack) == 0:
-#                 val = False
+#                 answer = False
 #                 break
 #             if stack[-1] == '[':
 #                 stack.pop()
 #             else:
-#                 val = False
+#                 answer = False
 #                 break
-#     if val and not stack:
+#     if answer and len(stack) == 0:
 #         print('yes')
 #     else:
 #         print('no')
+
 
 # 1874 번
 
@@ -90,4 +92,28 @@
 #         queue.rotate(- que_index)
 #         count += que_index
 #     queue.popleft()
+# print(count)
+
+# from collections import deque
+# n, m = map(int, input().split())
+# number = list(map(int, input().split()))
+# count = 0
+# queue = deque()
+# for i in range(n):
+#     queue.append(i + 1)
+# for i in range(len(number)):
+#     if number[i] == queue[0]:
+#         queue.popleft()
+#         continue
+#     que_index = queue.index(number[i])  # 위치를 찾아줌
+
+#     if que_index > len(queue) // 2:
+#         queue.rotate(len(queue) - que_index)
+#         count += len(queue) - que_index
+#         # rotate 정방향
+
+#     elif que_index <= len(queue) // 2:
+#         queue.rotate(-que_index)
+#         count += que_index
+#         # rotate 역방향
 # print(count)
