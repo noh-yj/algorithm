@@ -68,47 +68,47 @@
 # print(max(dp))
 
 # 토마토
-# from collections import deque
+from collections import deque
 
-# # 입력
-# dx = [-1, 1, 0, 0]  # 좌, 우, 상, 하
-# dy = [0, 0, -1, 1]
-# box = []
-# start_node = deque()
-# M, N = map(int, input().split())
-# for i in range(N):
-#     box.append(list(map(int, input().split())))
+# 입력
+dx = [-1, 1, 0, 0]  # 좌, 우, 상, 하
+dy = [0, 0, -1, 1]
+box = []
+start_node = deque()
+M, N = map(int, input().split())
+for i in range(N):
+    box.append(list(map(int, input().split())))
 
-# for i in range(N):
-#     for j in range(M):
-#         if box[i][j] == 1:
-#             start_node.append([i, j])
-
-
-# def tomato(arr, start_node):
-#     queue = start_node
-#     while queue:
-#         position = queue.popleft()
-
-#         for i in range(4):
-#             x = position[1] + dx[i]
-#             y = position[0] + dy[i]
-
-#             if 0 <= x < M and 0 <= y < N and arr[y][x] == 0:
-#                 arr[y][x] = arr[position[0]][position[1]] + 1
-#                 queue.append([y, x])
+for i in range(N):
+    for j in range(M):
+        if box[i][j] == 1:
+            start_node.append([i, j])
 
 
-# tomato(box, start_node)
+def tomato(arr, start_node):
+    queue = start_node
+    while queue:
+        position = queue.popleft()
 
-# day = 0
-# for i in box:
-#     for j in i:
-#         if j == 0:
-#             day = -1
-#             break
-#         elif day < j - 1:
-#             day = j - 1
-#     if j == 0:
-#         break
-# print(day)
+        for i in range(4):
+            x = position[1] + dx[i]
+            y = position[0] + dy[i]
+
+            if 0 <= x < M and 0 <= y < N and arr[y][x] == 0:
+                arr[y][x] = arr[position[0]][position[1]] + 1
+                queue.append([y, x])
+
+
+tomato(box, start_node)
+
+day = 0
+for i in box:
+    for j in i:
+        if j == 0:
+            day = -1
+            break
+        elif day < j - 1:
+            day = j - 1
+    if j == 0:
+        break
+print(day)
