@@ -37,32 +37,32 @@
 # 1874 번
 
 
-# def stack_sequence(n, squence):
-#     stack = []
-#     count = 1
-#     result = []
-#     squence_index = 0
-#     while True:
-#         if len(stack) == 0:
-#             stack.append(count)
-#             result.append('+')
-#             count += 1
-#         elif stack[-1] == squence[squence_index]:
-#             stack.pop()
-#             result.append('-')
-#             squence_index += 1
-#             if squence_index == n:
-#                 break
-#         else:
-#             if n < count:
-#                 print('NO')
-#                 break
-#             stack.append(count)
-#             result.append('+')
-#             count += 1
-#     if len(stack) == 0:
-#         for i in result:
-#             print(i)
+def stack_sequence(n, squence):
+    stack = []
+    count = 1
+    result = []
+    squence_index = 0
+    while True:
+        if len(stack) == 0:
+            stack.append(count)
+            result.append('+')
+            count += 1
+        elif stack[-1] == squence[squence_index]:
+            stack.pop()
+            result.append('-')
+            squence_index += 1
+            if squence_index == n:
+                break
+        else:
+            if n < count:
+                print('NO')
+                break
+            stack.append(count)
+            result.append('+')
+            count += 1
+    if len(stack) == 0:
+        for i in result:
+            print(i)
 
 
 # sequence = list()
@@ -92,28 +92,4 @@
 #         queue.rotate(- que_index)
 #         count += que_index
 #     queue.popleft()
-# print(count)
-
-# from collections import deque
-# n, m = map(int, input().split())
-# number = list(map(int, input().split()))
-# count = 0
-# queue = deque()
-# for i in range(n):
-#     queue.append(i + 1)
-# for i in range(len(number)):
-#     if number[i] == queue[0]:
-#         queue.popleft()
-#         continue
-#     que_index = queue.index(number[i])  # 위치를 찾아줌
-
-#     if que_index > len(queue) // 2:
-#         queue.rotate(len(queue) - que_index)
-#         count += len(queue) - que_index
-#         # rotate 정방향
-
-#     elif que_index <= len(queue) // 2:
-#         queue.rotate(-que_index)
-#         count += que_index
-#         # rotate 역방향
 # print(count)

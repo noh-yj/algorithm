@@ -5,18 +5,17 @@
 
 a = int(input())
 for i in range(a):
-    a_int = list(map(int, input().split()))
-    b = 0
-    score = a_int[1:]
-    over_average = []
-    for i in score:
-        b += i
-    average = b/a_int[0]
+    number = list(map(int, input().split()))
+    b = []
+    score = number[1:]
+    student = number[0]
+    average = sum(score) / student
     for i in score:
         if i > average:
-            over_average.append(i)
-    result = (len(over_average) / a_int[0])
-    print(format(result, "0.3%"))
+            b.append(i)
+    result = len(b) / student
+    print(format(result, '.3%'))
+
 
 # 4673번
 # !self_number = d(n) (n과 각 자리수를 더함) ex) 75 75 + 7 + 5 >> a_num = n + n//10 + n%10
@@ -45,18 +44,16 @@ self_num()
 # Mississipi zZa
 
 word = str(input()).upper()
-one_str = list(set(word))
-find_word = []
+set_word = list(set(word))
+count_word = []
 
-for index in one_str:
-    str_num = word.count(index)
-    find_word.append(str_num)
-
-if find_word.count(max(find_word)) >= 2:
+for i in set_word:
+    count_word.append(word.count(i))
+if count_word.count(max(count_word)) >= 2:
     print('?')
 else:
-    i = find_word.index(max(find_word))
-    print(one_str[i])
+    max_index = count_word.index(max(count_word))
+    print(set_word[max_index])
 
 
 # 2941번

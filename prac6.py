@@ -89,7 +89,6 @@ def tomato(arr, start_node):
     queue = start_node
     while queue:
         position = queue.popleft()
-
         for i in range(4):
             x = position[1] + dx[i]
             y = position[0] + dy[i]
