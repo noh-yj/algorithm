@@ -22,11 +22,20 @@
 #     for j in range(n):
 #         if n == 5*i + 3*j:
 #             b.append(i+j)
-
-#         else:
-#             pass
-# if len(b) >= 1:
+# if len(b):
 #     print(min(b))
+# else:
+#     print(-1)
+
+# n = int(input())
+# count = 0
+# while n >= 0:
+#     if n % 5 == 0:
+#         count += n // 5
+#         print(count)
+#         break
+#     n = n - 3
+#     count += 1
 # else:
 #     print(-1)
 
