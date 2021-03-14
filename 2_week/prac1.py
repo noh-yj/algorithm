@@ -40,7 +40,7 @@
 #     print(-1)
 
 # fly me to the alpha centauri
-# import math
+
 # t = int(input())
 # for i in range(t):
 #     x, y = map(int, input().split())
@@ -49,7 +49,7 @@
 #     if diff <= 3:
 #         print(diff)
 #     else:
-#         n = int(math.sqrt(diff))
+#         n = int(diff**0.5)
 #         if diff == n**2:
 #             print(2*n - 1)
 #         elif n**2 < diff <= n**2 + n:
