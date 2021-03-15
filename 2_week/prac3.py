@@ -201,3 +201,52 @@
 # bfs_queue(graph, start_node)
 
 # 2108 통계학
+# 시간 초과
+# import math
+# import sys
+# n = int(sys.stdin.readline())
+# arr = []
+# for i in range(n):
+#     arr.append(int(sys.stdin.readline()))
+# arr.sort()
+# mid = len(arr) // 2
+# count_arr = []
+# b = list(set(arr))
+# b.sort()
+# for i in b:
+#     count_arr.append(arr.count(i))
+
+# if count_arr.count(max(count_arr)) >= 2:
+#     result = min(b[count_arr.index(max(count_arr))+1:])
+# else:
+#     result = min(b)
+
+# print(math.round(sum(arr) / len(arr)))
+# print(arr[mid])
+# print(result)
+# print(max(arr) - min(arr))
+
+# 정답 코드
+# import sys
+# pypy3로 하면 위에 sys 안불러도 됨
+# from collections import Counter
+# n = int(sys.stdin.readline())
+# arr = []
+# for i in range(n):
+#     arr.append(int(sys.stdin.readline()))
+# arr.sort()
+# mid = len(arr) // 2
+# print(round(sum(arr) / len(arr)))
+# print(arr[mid])
+
+# k = Counter(arr).most_common()
+# if len(arr) > 1:
+#     if k[0][1] == k[1][1]:
+#         print(k[1][0])
+#     else:
+#         print(k[0][0])
+# else:
+#     print(arr[0])
+
+
+# print(max(arr) - min(arr))
