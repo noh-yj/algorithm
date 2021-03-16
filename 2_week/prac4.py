@@ -29,33 +29,30 @@
 
 
 # n과 m(2)
-def backtracking(cnt):
-    if cnt == M:
-        print(*arr)
-        return
-    for i in range(N):
-        if visited[i] == False:
-            visited[i] = True
-            arr.append(i+1)
-            backtracking(cnt+1)
-            arr.pop()
-            for j in range(i+1, N):  # 겹치는거 제거
-                visited[j] = False
+# def backtracking(cnt):
+#     if cnt == M:
+#         print(*arr)
+#         return
+#     for i in range(N):
+#         if visited[i] == False:
+#             visited[i] = True
+#             arr.append(i+1)
+#             backtracking(cnt+1)
+#             arr.pop()
+#             for j in range(i+1, N):  # 겹치는거 제거
+#                 visited[j] = False
 
 
-N, M = map(int, input().split())
-visited = [False]*N
-arr = []
-backtracking(0)
+# N, M = map(int, input().split())
+# visited = [False]*N
+# arr = []
+# backtracking(0)
 
 # from itertools import combinations
 # N, M = map(int, input().split())
 # p = combinations(range(1, N+1), M)
 # for i in p:
 #     print(*i)
-
-
-# n-queen
 
 # 터렛
 # t = int(input())
