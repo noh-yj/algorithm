@@ -15,6 +15,7 @@
 #     else:
 #         b_count += 1
 
+
 # w_count = 0
 # b_count = 0
 # n = int(input())
@@ -27,25 +28,25 @@
 # print(b_count)
 
 
-# n과 m (2)
-# def dfs(cnt):
-#     if cnt == M:
-#         print(*arr)
-#         return
-#     for i in range(N):
-#         if visited[i] == 0:
-#             visited[i] = 1
-#             arr.append(i+1)
-#             dfs(cnt+1)
-#             arr.pop()
-#             for j in range(i+1, N):
-#                 visited[j] = 0
+# n과 m(2)
+def backtracking(cnt):
+    if cnt == M:
+        print(*arr)
+        return
+    for i in range(N):
+        if visited[i] == False:
+            visited[i] = True
+            arr.append(i+1)
+            backtracking(cnt+1)
+            arr.pop()
+            for j in range(i+1, N):  # 겹치는거 제거
+                visited[j] = False
 
 
-# N, M = map(int, input().split())
-# visited = [0 for _ in range(N)]
-# arr = []
-# dfs(0)
+N, M = map(int, input().split())
+visited = [False]*N
+arr = []
+backtracking(0)
 
 # from itertools import combinations
 # N, M = map(int, input().split())
