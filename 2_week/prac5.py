@@ -119,3 +119,23 @@
 # print('<', end='')
 # print(', '.join(arr), end='')
 # print('>', end='')
+
+# 가장 긴 바이토닉 부분 수열
+# n = int(input())
+# num = list(map(int, input().split()))
+# reverse_num = num[::-1]
+
+# increase = [1 for i in range(n)]
+# decrease = [1 for i in range(n)]
+
+# for i in range(n):
+#     for j in range(i):
+#         if num[i] > num[j]:
+#             increase[i] = max(increase[i], increase[j]+1)
+#         if reverse_num[i] > reverse_num[j]:
+#             decrease[i] = max(decrease[i], decrease[j] + 1)
+# result = [0 for i in range(n)]
+# for i in range(n):
+#     result[i] = increase[i] + decrease[n-i-1] - 1
+
+# print(max(result))
