@@ -102,25 +102,7 @@
 # print(max(num)*min(num))
 
 # 최대공약수와 최소공배수
-# 방법 1 틀렸다 나오는데 반례는 딱히 안보임
-# num = list(map(int, input().split()))
-# num.sort()
-# a = []
-# b = []
-# c = []
-# for i in range(2, num[1]):
-#     if num[0] % i == 0 and num[1] % i == 0:
-#         a.append(i)
-#         b.append(num[0]//i)
-#         c.append(num[1]//i)
 
-# if len(a) > 0 and len(b) > 0 and len(c):
-#     print(max(a))
-#     print(max(a)*min(b)*min(c))
-# else:
-#     pass
-
-# 방법 2
 # num = list(map(int, input().split()))
 # num.sort()
 # x, y = num[1], num[0]
