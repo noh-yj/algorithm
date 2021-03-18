@@ -14,7 +14,7 @@
 #             if len(stack) == 0:
 #                 answer = False
 #                 break
-#             if stack[-1] == '(':
+#             elif stack[-1] == '(':
 #                 stack.pop()
 #             else:
 #                 answer = False
@@ -23,7 +23,7 @@
 #             if len(stack) == 0:
 #                 answer = False
 #                 break
-#             if stack[-1] == '[':
+#             elif stack[-1] == '[':
 #                 stack.pop()
 #             else:
 #                 answer = False
