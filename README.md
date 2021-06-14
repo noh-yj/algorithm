@@ -1,1 +1,1 @@
-# algorithm 학습 자료 저장
+# algorithm 공부
